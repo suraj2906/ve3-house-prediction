@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Housing Price Predictor</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>California Housing Price Predictor</h1>
+            <form action="/predict" method="post">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="longitude">Longitude</label>
+                        <input type="number" step="0.00001" id="longitude" name="longitude" required>
+                        <span class="input-hint">Enter the longitude coordinate</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="latitude">Latitude</label>
+                        <input type="number" step="0.00001" id="latitude" name="latitude" required>
+                        <span class="input-hint">Enter the latitude coordinate</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="house_age">Housing Median Age</label>
+                        <input type="number" step="0.1" id="house_age" name="house_age" required>
+                        <span class="input-hint">Median age of housing in years</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="total_rooms">Total Rooms</label>
+                        <input type="number" step="1" id="total_rooms" name="total_rooms" required>
+                        <span class="input-hint">Total number of rooms</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="total_bedrooms">Total Bedrooms</label>
+                        <input type="number" step="1" id="total_bedrooms" name="total_bedrooms" required>
+                        <span class="input-hint">Total number of bedrooms</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="population">Population</label>
+                        <input type="number" step="1" id="population" name="population" required>
+                        <span class="input-hint">Total population in the block</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="households">Households</label>
+                        <input type="number" step="1" id="households" name="households" required>
+                        <span class="input-hint">Number of households</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="median_income">Median Income</label>
+                        <input type="number" step="1" id="median_income" name="median_income" required>
+                        <span class="input-hint">Median income</span>
+                    </div>
+                </div>
+                <button type="submit" class="predict-btn">Predict House Value</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

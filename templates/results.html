@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price Prediction Result</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card result-card">
+            <h1>Predicted House Value</h1>
+            <div class="prediction-value">${{ prediction }}</div>
+Copy        <div class="input-details">
+            <h2>Property Details</h2>
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <span class="detail-label">Longitude</span>
+                    <span class="detail-value">{{ longitude }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Latitude</span>
+                    <span class="detail-value">{{ latitude }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Housing Median Age</span>
+                    <span class="detail-value">{{ house_age }} years</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Total Rooms</span>
+                    <span class="detail-value">{{ total_rooms }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Total Bedrooms</span>
+                    <span class="detail-value">{{ total_bedrooms }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Population</span>
+                    <span class="detail-value">{{ population }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Households</span>
+                    <span class="detail-value">{{ households }}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Median Income</span>
+                    <span class="detail-value">${{ median_income }} (10k)</span>
+                </div>
+            </div>
+        </div>
+        
+        <a href="/" class="back-btn">Make Another Prediction</a>
+    </div>
+</div>
